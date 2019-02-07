@@ -1,0 +1,7 @@
+{
+   "appService.zipIgnorePattern": [
+      "node_modules{,/**}"
+   ],
+   "appService.defaultWebAppToDeploy": "/subscriptions/bc78ab00-3b26-4433-999d-e3b3d672b768/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/newAzureWebAppTest",
+   "appService.deploySubpath": ""
+}
