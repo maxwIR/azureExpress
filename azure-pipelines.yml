@@ -26,4 +26,4 @@ steps:
     pathtoPublish: '$(Build.SourcesDirectory)/newExpressApp'
     artifactName: BuildOutput
     parallel: true
-    parallelCount: 8
+    parallelCount: 4
