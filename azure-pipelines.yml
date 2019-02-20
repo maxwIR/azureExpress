@@ -23,7 +23,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: 'newExpressApp\**'
+    contents: '.\newExpressApp\**'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
