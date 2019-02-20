@@ -21,14 +21,9 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
-  inputs:
-    sourceFolder: '$(Build.SourcesDirectory)/newExpressApp'
-    contents: '**'
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
-
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    pathtoPublish: '$(Build.StagingDirectory)/newExpressApp'
     artifactName: BuildOutput
+    parallel: true
+    parallelCount: 8
