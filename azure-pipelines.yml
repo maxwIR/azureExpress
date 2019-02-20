@@ -22,11 +22,13 @@ steps:
   displayName: 'npm install and build'
 
 - task: CopyFiles@2
+  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    contents: 'newExpressApp\**'
-    targetFolder: $(Build.ArtifactStagingDirectory)
+    sourceFolder: '$(Build.SourcesDirectory)\newExpressApp'
+    contents: '**'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: BuildOutput
