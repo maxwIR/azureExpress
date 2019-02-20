@@ -24,7 +24,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
   inputs:
-    sourceFolder: '$(Build.SourcesDirectory)\newExpressApp'
+    sourceFolder: '$(Build.SourcesDirectory)/newExpressApp'
     contents: '**'
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 
