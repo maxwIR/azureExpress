@@ -23,7 +23,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    pathtoPublish: '$(Build.StagingDirectory)/newExpressApp'
+    pathtoPublish: '$(Build.SourcesDirectory)/newExpressApp'
     artifactName: BuildOutput
     parallel: true
     parallelCount: 8
