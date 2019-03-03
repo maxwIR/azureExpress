@@ -9,7 +9,7 @@ router.use('/search', (req: Request, res: Response) => {
    });
    const filtereFeats = getFeats(searchItem);
    
-   res.send(`Searched for ${(filtereFeats)}`);
+   res.send(filtereFeats);
 });
 router.use('/',  (req: Request, res: Response) => {
    res.sendFile('feats.json', {root: __dirname+'/../public'});

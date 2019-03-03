@@ -1,9 +1,9 @@
-import * as feats from "../../../public/feats.json";
+import {featList} from "../../../public/feats.json";
 import { IFeat } from "./feat.js";
 
 export function getFeats(filter?: IFilter): IFeat[]{
-    let ret = feats as IFeat[];
-    if (filter){
+    let ret = featList as IFeat[];
+    if (filter && ret){
         ret = ret.filter(feat =>  isAvailable(feat, filter));
     }
     return ret;
