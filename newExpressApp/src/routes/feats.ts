@@ -1,10 +1,17 @@
 import { Router, Request, Response } from 'express';
+import { getFeats } from '../tools/feats/filter';
 
 const router: Router = Router();
-router.get('/search', (req: Request, res: Response) => {
-   res.send(`Searched for ${JSON.stringify(req.body)}`);
+router.use('/search', (req: Request, res: Response) => {
+   let searchItem : any = {};
+   Object.keys(req.query).forEach(key => {
+      searchItem[key] = req.query[key];
+   });
+   const filtereFeats = getFeats(searchItem);
+   
+   res.send(`Searched for ${(filtereFeats)}`);
 });
-router.use((req: Request, res: Response) => {
+router.use('/',  (req: Request, res: Response) => {
    res.sendFile('feats.json', {root: __dirname+'/../public'});
 });
 
