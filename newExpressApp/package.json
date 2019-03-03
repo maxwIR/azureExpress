@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app.js",
+    "start": "node ./out/src/app.js",
     "build": "tsc -p .",
     "watch": "tsc -watch -p ."
   },

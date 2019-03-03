@@ -8,7 +8,7 @@
             "es2016"
         ],
         "module": "commonjs",
-        "outDir": "./",
+        "outDir": "./out",
         "typeRoots": [
             "./node_modules/@types"
         ],
